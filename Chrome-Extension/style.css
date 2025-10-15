@@ -14,4 +14,9 @@ input {
   border-radius: 2px;
 }
 button {
+  background-color: #5f9341;
+  color: white;
+  font-weight: bold;
+  padding: 4px;
+  margin-top: 2px;
 }
