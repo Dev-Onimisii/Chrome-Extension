@@ -1,8 +1,7 @@
-const inputBtn = document.querySelector("#input-btn");
+const inputBtn = document.getElementById("input-btn");
 
 console.log(inputBtn);
 
 inputBtn.addEventListener("click", () => {
   e.preventDefault();
-  console.log("Button Clicked");
 });
