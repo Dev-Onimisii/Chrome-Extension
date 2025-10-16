@@ -10,7 +10,7 @@ inputBtn.addEventListener("click", (e) => {
   myLeads.push(inputElement);
 
   myLeads.forEach((ele) => {
-    ulElement.textContent = ele;
+    ulElement.textContent = [ele] + " ";
   });
   console.log(myLeads);
 });
