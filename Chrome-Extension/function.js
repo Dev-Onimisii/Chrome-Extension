@@ -3,6 +3,7 @@ const inputEl = document.querySelector("#input-el");
 const ulElement = document.querySelector("#ul-el");
 
 let myLeads = ["www.google.com", "www.youtube.com", "www.whatsapp.com"];
+let listItems = "";
 
 inputBtn.addEventListener("click", (e) => {
   e.preventDefault();
@@ -11,5 +12,6 @@ inputBtn.addEventListener("click", (e) => {
 });
 
 for (let i = 0; i < myLeads.length; i++) {
-  ulElement.innerHTML += `<li>${myLeads[i]}</li>`;
+  listItems += `<li>${myLeads[i]}</li>`;
+  ulElement.innerHTML = listItems;
 }
