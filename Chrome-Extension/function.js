@@ -4,7 +4,7 @@ const ulElement = document.querySelector("#ul-el");
 
 let myLeads = [];
 
-inputBtn.addEventListener("click", () => {
+inputBtn.addEventListener("click", (e) => {
   myLeads.push(inputEl.value);
   inputEl.value = "";
   renderLeads();
@@ -13,7 +13,7 @@ inputBtn.addEventListener("click", () => {
 function renderLeads() {
   let listItems = "";
   for (let i = 0; i < myLeads.length; i++) {
-    listItems += "<li><a href#>" + myLeads[i] + "</a></li>";
+    listItems += "<li><a href=''>" + myLeads[i] + "</a></li>";
   }
   ulElement.innerHTML = listItems;
 }
