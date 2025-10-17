@@ -2,17 +2,18 @@ const inputBtn = document.querySelector("#input-btn");
 const inputEl = document.querySelector("#input-el");
 const ulElement = document.querySelector("#ul-el");
 
-let myLeads = ["www.google.com", "www.youtube.com", "www.whatsapp.com"];
-let listItems = "";
+let myLeads = [];
 
-inputBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  const inputElement = inputEl.value;
-  myLeads.push(inputElement);
+inputBtn.addEventListener("click", () => {
+  myLeads.push(inputEl.value);
+  renderLeads();
 });
 
-for (let i = 0; i < myLeads.length; i++) {
-  listItems += `<li>${myLeads[i]}</li>`;
-  console.log(listItems);
+function renderLeads() {
+  let listItems = "";
+
+  for (let i = 0; i < myLeads.length; i++) {
+    listItems += "<li>" + myLeads[i] + "</li>";
+  }
   ulElement.innerHTML = listItems;
 }
