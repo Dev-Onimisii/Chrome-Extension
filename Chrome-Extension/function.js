@@ -10,4 +10,6 @@ inputBtn.addEventListener("click", (e) => {
   myLeads.push(inputElement);
 });
 
-for (let i = 0; i < myLeads.length; i++) {}
+for (let i = 0; i < myLeads.length; i++) {
+  ulElement.innerHTML += `<li>${myLeads[i]}</li>`;
+}
