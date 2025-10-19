@@ -5,6 +5,11 @@ const ulElement = document.querySelector("#ul-el");
 let myLeads = [];
 let leadsFromLocalStorge = JSON.parse(localStorage.getItem("myLeads"));
 
+if (leadsFromLocalStorge) {
+  myLeads = leadsFromLocalStorge;
+  renderLeads();
+}
+
 inputBtn.addEventListener("click", (e) => {
   e.preventDefault();
   myLeads.push(inputEl.value);
