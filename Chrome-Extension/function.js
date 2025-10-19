@@ -3,7 +3,7 @@ const inputEl = document.querySelector("#input-el");
 const ulElement = document.querySelector("#ul-el");
 
 let myLeads = [];
-localStorage;
+localStorage.setItem("myLeads", "www.example.lead.com");
 
 inputBtn.addEventListener("click", (e) => {
   e.preventDefault();
