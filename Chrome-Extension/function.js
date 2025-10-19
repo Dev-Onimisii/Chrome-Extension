@@ -14,7 +14,7 @@ if (leadsFromLocalStorge) {
 deleteBtn.addEventListener("dblclick", () => {
   localStorage.clear();
   myLeads = [];
-  re;
+  renderLeads();
 });
 
 inputBtn.addEventListener("click", (e) => {
