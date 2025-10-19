@@ -24,6 +24,10 @@ button {
   border: 1px solid #3d8b10;
   border-radius: 3px;
 }
+#delete-btn {
+  background-color: transparent;
+  color: #3d8b10;
+}
 ul {
   list-style-type: none;
   margin-top: 20px;
