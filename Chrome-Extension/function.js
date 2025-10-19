@@ -8,9 +8,11 @@ inputBtn.addEventListener("click", (e) => {
   e.preventDefault();
   myLeads.push(inputEl.value);
   inputEl.value = "";
+  localStorage.setItem("myLeads", JSON.stringify(myLeads));
+
   renderLeads();
 });
-
+localStorage.getItem("myLeads", JSON.parse(myLeads));
 function renderLeads() {
   let listItems = "";
   for (let i = 0; i < myLeads.length; i++) {
