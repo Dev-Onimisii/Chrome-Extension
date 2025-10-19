@@ -12,7 +12,6 @@ inputBtn.addEventListener("click", (e) => {
 
   renderLeads();
 });
-localStorage.getItem("myLeads", JSON.parse(myLeads));
 function renderLeads() {
   let listItems = "";
   for (let i = 0; i < myLeads.length; i++) {
