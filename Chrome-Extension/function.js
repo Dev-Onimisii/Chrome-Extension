@@ -8,13 +8,13 @@ let leadsFromLocalStorge = JSON.parse(localStorage.getItem("myLeads"));
 
 if (leadsFromLocalStorge) {
   myLeads = leadsFromLocalStorge;
-  renderLeads();
+  render(myLeads);
 }
 
 deleteBtn.addEventListener("dblclick", () => {
   localStorage.clear();
   myLeads = [];
-  renderLeads();
+  render(myLeads);
 });
 
 inputBtn.addEventListener("click", (e) => {
@@ -23,7 +23,7 @@ inputBtn.addEventListener("click", (e) => {
   inputEl.value = "";
   localStorage.setItem("myLeads", JSON.stringify(myLeads));
 
-  render();
+  render(myLeads);
 });
 function render(leads) {
   let listItems = "";
