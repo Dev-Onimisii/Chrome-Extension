@@ -23,9 +23,9 @@ inputBtn.addEventListener("click", (e) => {
   inputEl.value = "";
   localStorage.setItem("myLeads", JSON.stringify(myLeads));
 
-  renderLeads();
+  render();
 });
-function renderLeads(leads) {
+function render(leads) {
   let listItems = "";
   for (let i = 0; i < leads.length; i++) {
     listItems += `
