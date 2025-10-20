@@ -11,6 +11,7 @@ const tabs = [{ url: "https://www.linkedIn.com" }];
 tabBtn.addEventListener("click", (e) => {
   e.preventDefault();
   myLeads.push(tabs[0].url);
+  localStorage.setItem("myLeads", JSON.stringify(myLeads));
 });
 
 if (leadsFromLocalStorge) {
