@@ -10,6 +10,7 @@ let leadsFromLocalStorge = JSON.parse(localStorage.getItem("myLeads"));
 const tabs = [{ url: "https://www.linkedIn.com" }];
 tabBtn.addEventListener("click", (e) => {
   e.preventDefault();
+  console.log(tabs);
 });
 
 if (leadsFromLocalStorge) {
