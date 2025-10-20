@@ -7,6 +7,10 @@ const tabBtn = document.querySelector("#tab-btn");
 let myLeads = [];
 let leadsFromLocalStorge = JSON.parse(localStorage.getItem("myLeads"));
 
+tabBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+});
+
 if (leadsFromLocalStorge) {
   myLeads = leadsFromLocalStorge;
   render(myLeads);
