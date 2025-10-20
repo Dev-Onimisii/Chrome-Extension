@@ -2,7 +2,7 @@ const inputBtn = document.querySelector("#input-btn");
 const inputEl = document.querySelector("#input-el");
 const ulElement = document.querySelector("#ul-el");
 const deleteBtn = document.querySelector("#delete-btn");
-const tabBtn = 
+const tabBtn = document.querySelector("#tab-btn");
 
 let myLeads = [];
 let leadsFromLocalStorge = JSON.parse(localStorage.getItem("myLeads"));
