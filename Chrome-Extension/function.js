@@ -12,6 +12,7 @@ tabBtn.addEventListener("click", (e) => {
   e.preventDefault();
   myLeads.push(tabs[0].url);
   localStorage.setItem("myLeads", JSON.stringify(myLeads));
+  render(myLeads);
 });
 
 if (leadsFromLocalStorge) {
