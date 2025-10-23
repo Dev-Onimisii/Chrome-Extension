@@ -11,9 +11,10 @@ const tabs = [{ url: "https://www.linkedIn.com" }];
 tabBtn.addEventListener("click", (e) => {
   e.preventDefault();
 
-  chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {});
+  chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+    myLeads.push(tabs[0].url);
+  });
 
-  myLeads.push(tabs[0].url);
   localStorage.setItem("myLeads", JSON.stringify(myLeads));
   render(myLeads);
 });
