@@ -7,10 +7,7 @@ const tabBtn = document.querySelector("#tab-btn");
 let myLeads = [];
 let leadsFromLocalStorge = JSON.parse(localStorage.getItem("myLeads"));
 
-const tabs = [{ url: "https://www.linkedIn.com" }];
-tabBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-
+tabBtn.addEventListener("click", () => {
   chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
     myLeads.push(tabs[0].url);
     localStorage.setItem("myLeads", JSON.stringify(myLeads));
