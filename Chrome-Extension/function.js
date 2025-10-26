@@ -7,6 +7,11 @@ const tabBtn = document.querySelector("#tab-btn");
 let myLeads = [];
 let leadsFromLocalStorge = JSON.parse(localStorage.getItem("myLeads"));
 
+if (leadsFromLocalStorge) {
+  myLeads = leadsFromLocalStorge;
+  render(myLeads);
+}
+
 tabBtn.addEventListener("click", () => {
   chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
     myLeads.push(tabs[0].url);
@@ -14,11 +19,6 @@ tabBtn.addEventListener("click", () => {
     render(myLeads);
   });
 });
-
-if (leadsFromLocalStorge) {
-  myLeads = leadsFromLocalStorge;
-  render(myLeads);
-}
 
 deleteBtn.addEventListener("dblclick", () => {
   localStorage.clear();
